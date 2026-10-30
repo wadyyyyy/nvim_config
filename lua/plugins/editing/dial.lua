@@ -1,0 +1,31 @@
+vim.keymap.set("n", "<C-a>", function()
+	require("dial.map").manipulate("increment", "normal")
+end, { desc = "Increment" })
+
+vim.keymap.set("n", "<C-x>", function()
+	require("dial.map").manipulate("decrement", "normal")
+end, { desc = "Decrement" })
+
+vim.keymap.set("n", "g<C-a>", function()
+	require("dial.map").manipulate("increment", "gnormal")
+end, { desc = "Increment (additive)" })
+
+vim.keymap.set("n", "g<C-x>", function()
+	require("dial.map").manipulate("decrement", "gnormal")
+end, { desc = "Decrement (additive)" })
+
+vim.keymap.set("x", "<C-a>", function()
+	require("dial.map").manipulate("increment", "visual")
+end, { desc = "Increment" })
+
+vim.keymap.set("x", "<C-x>", function()
+	require("dial.map").manipulate("decrement", "visual")
+end, { desc = "Decrement" })
+
+vim.keymap.set("x", "g<C-a>", function()
+	require("dial.map").manipulate("increment", "gvisual")
+end, { desc = "Increment (additive)" })
+
+vim.keymap.set("x", "g<C-x>", function()
+	require("dial.map").manipulate("decrement", "gvisual")
+end, { desc = "Decrement (additive)" })
